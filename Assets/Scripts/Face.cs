@@ -8,8 +8,8 @@ public class Face : MonoBehaviour
     private Rigidbody2D rigidBody2D;
     private CircleCollider2D circleCollider;
     private const float FORCE_MULTIPLIER = 5f;
-    public ColorType ColorType { get; set; } = ColorType.White;
-
+    public ColorType ColorType = ColorType.White;
+    
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -33,18 +33,33 @@ public class Face : MonoBehaviour
             return;
         }
 
-        otherFace.ColorType = ColorType;
-        var renderer = otherFace.GetComponent<SpriteRenderer>();
+        SpriteRenderer renderer;
+
+        if (ColorType == ColorType.White && otherFace.ColorType != ColorType.White)
+        {
+            renderer = spriteRenderer;
+            ColorType = otherFace.ColorType;
+        }
+        else if (ColorType != ColorType.White && otherFace.ColorType == ColorType.White)
+        {
+            renderer = otherFace.GetComponent<SpriteRenderer>();
+            otherFace.ColorType = ColorType;
+        }
+        else 
+        { 
+            return; 
+        }
+
         switch (ColorType)
         {
             case ColorType.Green:
                 renderer.color = Color.green;
                 break;
             case ColorType.Red:
-                spriteRenderer.color = Color.red;
+                renderer.color = Color.red;
                 break;
             case ColorType.Blue:
-                spriteRenderer.color = Color.blue;
+                renderer.color = Color.blue;
                 break;
         }
     }

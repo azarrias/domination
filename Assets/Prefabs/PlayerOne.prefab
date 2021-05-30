@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5205379007292360822}
   - component: {fileID: 393300984}
   - component: {fileID: 6441054128335138110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,3 +114,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: 2
   colorChangingSpeed: 1
+  movingSpeed: 3
+  playerId: P1
