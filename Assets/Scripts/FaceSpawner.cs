@@ -10,13 +10,13 @@ public class FaceSpawner : MonoBehaviour
 
     void Start()
     {
-        var size = prefab.GetComponent<BoxCollider2D>().size;
+        var diameter = prefab.GetComponent<CircleCollider2D>().radius * 2;
 
         for (int i = 0; i < amount; ++i)
         {
             var obj = GameObject.Instantiate(prefab);
-            var posX = Random.Range(ScreenUtils.ScreenLeft + size.x, ScreenUtils.ScreenRight - size.x);
-            var posY = Random.Range(ScreenUtils.ScreenBottom + size.y, ScreenUtils.ScreenTop - size.y);
+            var posX = Random.Range(ScreenUtils.ScreenLeft + diameter, ScreenUtils.ScreenRight - diameter);
+            var posY = Random.Range(ScreenUtils.ScreenBottom + diameter, ScreenUtils.ScreenTop - diameter);
             var position = new Vector2(posX, posY);
             var sprite = sprites[Random.Range(0, sprites.Length)];
             var script = obj.GetComponent<Face>();

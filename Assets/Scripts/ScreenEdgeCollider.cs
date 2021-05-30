@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScreenEdgeCollider : MonoBehaviour
 {
+    [SerializeField] PhysicsMaterial2D physicsMaterial;
+
     void Awake()
     {
         var camera = Camera.main;
@@ -20,5 +22,10 @@ public class ScreenEdgeCollider : MonoBehaviour
 
         var edgeCollider = gameObject.AddComponent<EdgeCollider2D>();
         edgeCollider.points = new[] { bottomLeft, topLeft, topRight, bottomRight, bottomLeft };
+
+        if (physicsMaterial != null)
+        {
+            edgeCollider.sharedMaterial = physicsMaterial;
+        }
     }
 }

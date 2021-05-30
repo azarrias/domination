@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75027f74bad2c4447bb492cbf5382456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  physicsMaterial: {fileID: 6200000, guid: fa4dd2bd5823a654ea5658b588c021cd, type: 2}
 --- !u!114 &1077149698
 MonoBehaviour:
   m_ObjectHideFlags: 0
