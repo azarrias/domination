@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Face : MonoBehaviour
 {
-    public void Init(Vector2 position)
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    public void Init(Vector2 position, Sprite sprite)
     {
         transform.position = position;
+        spriteRenderer.sprite = sprite;
     }
 }

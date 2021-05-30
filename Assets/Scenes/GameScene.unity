@@ -277,3 +277,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8102298902163500983, guid: b23660708daa36b4f8d5820443081eef, type: 3}
+  amount: 50
+  sprites:
+  - {fileID: 352667614993179775, guid: 632c4821490332748bdfd498de61d8fe, type: 3}
+  - {fileID: 6728078740956168734, guid: 632c4821490332748bdfd498de61d8fe, type: 3}
+  - {fileID: 2238136341015891335, guid: 632c4821490332748bdfd498de61d8fe, type: 3}
+  - {fileID: -2624413391016279276, guid: 632c4821490332748bdfd498de61d8fe, type: 3}
+  - {fileID: 2530920999617147776, guid: 632c4821490332748bdfd498de61d8fe, type: 3}
+  - {fileID: 7442159267756367299, guid: 632c4821490332748bdfd498de61d8fe, type: 3}
+  - {fileID: -5538499448761425303, guid: 632c4821490332748bdfd498de61d8fe, type: 3}
